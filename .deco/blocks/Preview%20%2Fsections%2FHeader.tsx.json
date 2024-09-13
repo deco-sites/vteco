@@ -1,0 +1,23 @@
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "links": [
+    {
+      "text": "Inicio",
+      "href": "/"
+    },
+    {
+      "text": "Quem Somos",
+      "href": "/#who"
+    },
+    {
+      "text": "Contato",
+      "href": "/#contact"
+    },
+    {
+      "text": "Por que Migrar?"
+    }
+  ],
+  "title": "Vteco",
+  "buttonText": "Quero Migrar Agora",
+  "subtitle": " "
+}
