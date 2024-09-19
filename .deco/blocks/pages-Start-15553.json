@@ -32,8 +32,7 @@
     {
       "__resolveType": "site/sections/Hero.tsx",
       "title": "UMA MIGRAÇÃO VTEX IO DESCOMPLICADA COM GO-LIVE EM ATÉ 30 DIAS",
-      "buttonText": "QUERO MIGRAR AGORA",
-      "backgroundImage": "https://static.vecteezy.com/system/resources/previews/023/059/322/original/abstract-technology-futuristic-up-arrows-light-blue-on-dark-blue-background-vector.jpg"
+      "buttonText": "QUERO MIGRAR AGORA"
     },
     {
       "__resolveType": "site/sections/QuemSomos.tsx",
