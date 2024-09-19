@@ -1,6 +1,4 @@
 import { useState } from 'preact/hooks';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push } from 'firebase/database';
 
 interface Props {
   /**
@@ -22,13 +20,6 @@ interface Props {
   textColor?: string;
 }
 
-const firebaseConfig = {
-  // Your Firebase configuration here
-};
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-
 export default function Newsletter({
   title = "Subscribe to Our Newsletter",
   subtitle = "Stay updated with our latest news and offers",
@@ -38,12 +29,20 @@ export default function Newsletter({
 }: Props) {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: Event) => {
+  const handleSubmit = async (e: Event) => {
     e.preventDefault();
-    const newsletterRef = ref(database, 'newsletter');
-    push(newsletterRef, { email: email });
-    setEmail("");
-    alert("Thank you for subscribing!");
+    try {
+      await fetch("/api/database/records/clientes", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" },
+      });
+      setEmail("");
+      alert("Thank you for subscribing!");
+    } catch (error) {
+      console.error("Error saving email:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
