@@ -65,6 +65,15 @@
           "description": "Go-live em até 30 dias, minimizando impactos no seu negócio."
         }
       ]
+    },
+    {
+      "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/LeadCatcher.tsx",
+      "title": "<p>dsadas</p>",
+      "subtitle": "dsadas",
+      "buttonText": "dasdas"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"

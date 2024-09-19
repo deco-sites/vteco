@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useSignal } from 'preact/hooks';
 
 interface Props {
   /**
@@ -27,7 +27,7 @@ export default function Newsletter({
   backgroundColor = "#f3f4f6",
   textColor = "#1f2937",
 }: Props) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useSignal("");
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
